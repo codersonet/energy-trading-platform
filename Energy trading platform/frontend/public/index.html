@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Decentralized Energy Trading Platform</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    
+    <!-- Meta Description -->
+    <meta name="description" content="A decentralized platform to trade green energy with AI-powered optimization and secure blockchain transactions." />
+    
+    <!-- Open Graph Meta Tags (for Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="Decentralized Energy Trading Platform" />
+    <meta property="og:description" content="Trade green energy directly through a decentralized platform with AI optimization and blockchain security." />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
+    <meta property="og:url" content="https://your-platform-url.com" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Decentralized Energy Trading Platform" />
+    <meta name="twitter:description" content="Trade green energy directly through a decentralized platform with AI optimization and blockchain security." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/twitter-image.png" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    
+    <!-- Custom Stylesheet (Optional) -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/styles.css" />
+    
+    <!-- Inline CSS for loading spinner -->
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: black;
+        color: white;
+      }
+      
+      /* Loading spinner styles */
+      #loading-spinner {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        height: 150px;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        border-top: 2px solid #32CD32; /* LimeGreen for tree outline */
+        animation: spin 1s linear infinite;
+      }
 
+      /* Animation for rotating the tree outline */
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Style for loading message */
+      #loading-message {
+        position: fixed;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 18px;
+      }
+
+      /* Placeholder for the tree image */
+      #tree-outline {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-image: url('%PUBLIC_URL%/tree-outline.png'); /* Use your tree outline image */
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: tree-draw 5s ease-in-out forwards;
+      }
+
+      /* Animation for tracing the tree outline */
+      @keyframes tree-draw {
+        0% {
+          stroke-dasharray: 0, 100;
+        }
+        100% {
+          stroke-dasharray: 100, 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- React will mount on this div -->
+    <div id="root"></div>
+
+    <!-- Loading spinner while React is initializing -->
+    <div id="loading-spinner">
+      <div id="tree-outline"></div>
+    </div>
+    <div id="loading-message">
+      Loading... Please wait while we optimize your green energy experience.
+    </div>
+    
+    <!-- Optional: Add external scripts if needed -->
+    <script src="%PUBLIC_URL%/script.js"></script>
+  </body>
+</html>
