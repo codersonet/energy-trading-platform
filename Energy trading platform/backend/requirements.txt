@@ -2,3 +2,5 @@ Flask==2.0.1
 Flask-CORS==3.10.1
 Flask-SQLAlchemy==2.5.1
 python-dotenv==0.19.1
+Web3==5.23.1
+tensorflow==2.4.1
