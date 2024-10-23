@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Navbar from './components/Navbar';
 import DotGridBackground from './components/DotGridBackground';
+import './App.css'; // Assuming this is where you have global styles
 
 function App() {
   return (
